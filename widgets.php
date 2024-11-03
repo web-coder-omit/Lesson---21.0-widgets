@@ -23,4 +23,15 @@ function these__wetget_register(){
 add_action('widgets_init','these__wetget_register');
 
 
+
+
+
+function demowidget_admin_enqueue_scripts($screen){
+    if($screen=="widgets.php"){
+    wp_enqueue_style("demowidget-admin-ui-css",plugin_dir_url(__FILE__)."asset/css/style.css");
+        }
+    }
+    add_action("admin_enqueue_scripts","demowidget_admin_enqueue_scripts");
+
+
 ?>
